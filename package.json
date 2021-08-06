@@ -1,0 +1,32 @@
+{
+  "name": "login-refresh-token",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "pretest": "cross-env NODE_env=test npx sequelize db:migrate",
+    "test": " cross-env NODE_ENV=test jest --detectOpenHandles ",
+    "posttest": "cross-env NODE_env=test npx sequelize db:migrate:undo:all"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/sequelize": "^4.28.10",
+    "@types/supertest": "^2.0.11",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "jest": "^27.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.12",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0",
+    "supertest": "^6.1.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2"
+  }
+}
